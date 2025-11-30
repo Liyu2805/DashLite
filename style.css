@@ -1,0 +1,32 @@
+body
+{
+    background-color: #000000;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : #ffffff;
+    margin : 0;
+    padding : 0;
+    text-align : center;
+}
+
+h1
+{
+    color : #5865f2;
+    margin-top : 50px;
+    font-size : 50px;
+}
+
+p
+{
+    color : #0a0a0a;
+    font-size : 20px;
+}
+
+.txt
+{
+    background-color: #0a0a0a;
+    padding : 20px;
+    border-radius : 12px;
+    box-shadow : 0 0 15px #5865f2;
+    width : 80%; 
+    max-width : 800px;
+}
