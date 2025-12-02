@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DashLite</title>
-</head>
-<body>
-    <div class = "profile">
-       <h1>Create your profile</h1>
-       <p>Join our community and start tracking your progress</p>
-       <form class ="txt" action="https://formspree.io/f/meobkaeb" method="POST">
-        <label class = "txt">Full Name</label> <br>
-        <input type="text" name="name" id="name" placeholder = "John Doe" required>
-        <label class = "txt">Email Address</label> <br> 
-        <input type="email" name="email" id="email" placeholder="john@example.com" required>
-        <label class = "txt">Bio</label> <br> 
-        <textarea name="message" id = "message" required></textarea>
-        <button type ="submit" id = "btn" style="margin-top : 10px";>Create Profile</button>    
-       </form>
-    </div>
-</body>
-</html>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="profile">
+      <form class="txt" action="/submit" method="POST">
+        <h1>Create your profile</h1>
+        <p>Join our community and start tracking your progress</p>
+        <label class="fn">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          class="inputbox"
+          placeholder="John Doe"
+          required
+        />
+        <br />
 
+        <label class="mail">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          class="inputbox"
+          placeholder="john@example.com"
+          required
+        />
+        <br />
+
+        <label class="skill">Skill Level</label>
+        <select id="skill" name="selectedFruit" class="inputbox">
+          <option value="Beginner" selected>Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <label class="bio">Bio</label>
+        <textarea
+          name="message"
+          class="inputbox"
+          placeholder="Tell us a bit about yourself..."
+          required
+        ></textarea>
+
+        <button type="submit" id="btn" style="margin-top: 10px">
+          Create Profile ➔
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
