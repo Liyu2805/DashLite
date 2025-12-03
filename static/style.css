@@ -1,0 +1,219 @@
+body
+{
+    background-color: #000000;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : #ffffff;
+    margin : 0;
+    padding : 0;
+    text-align : center;
+}
+
+h1
+{
+    color : #5865f2;
+    margin-top : 50px;
+    font-size : 50px;
+}
+
+p
+{
+    color : #2a2a2a;
+    font-size : 20px;
+}
+
+.inputbox {
+  background-color: #111;  
+  color: white;             
+  border: 1px solid #5865F2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.inputbox:focus {
+  outline: none;
+  border: 1px solid #8a95ff; 
+  box-shadow: 0 0 10px #5865f2;
+}
+
+textarea.inputbox {
+    height: 100px;   /* taller */
+}
+
+
+.inputbox::placeholder {
+  color: #aaa;             
+}
+
+button {
+  background-color: #5865f2;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: 2px solid #5865f2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px rgba(88, 101, 242, 0.6);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;      /* stack heading + badges */
+  gap: 20px;                   /* space between heading and badge row */
+  justify-content: center;
+  background: #0a0a0a;         /* container color */
+  padding: 20px;
+  box-shadow: 0 0 15px #5865f2;
+  width: 40%;
+  max-width: 800px;
+  margin: 20px auto;
+  color: #ffffff;              /* for heading/text inside container */
+}
+
+.fn, .mail , .bio, .skill
+{
+  text-align : left;
+  font-weight : 500;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0 50px 0;
+}
+
+.column img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #5865f2;
+}
+
+.dash
+{
+  display: flex;
+  flex-direction: column;  
+  float:left;    /* stack heading + badges */
+  gap: 20px;                   /* space between heading and badge row */
+  justify-content: center;
+  background: #0a0a0a;         /* container color */
+  padding: 20px;
+  box-shadow: 0 0 15px #5865f2;
+  width: 40%;
+  max-width: 80px;
+  margin: 20px auto;
+  color: #ffffff; 
+}
+
+/* Fix to contain floated elements */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* 1. Profile Card Styling (Left Column) */
+.profile-card {
+    float: left;
+    width: 35%; /* Takes about a third of the width */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* 2. Metrics Container Styling (Right Column) */
+.metrics-container {
+    float: left;
+    width: 65%; /* Takes the remaining space */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* --- STYLING FOR THE 4 METRIC BOXES
+
+INSIDE THE CONTAINER --- */
+
+.metric-box {
+    /* Make metric boxes float inside their container */
+    float: left;
+    width: 50%; /* 50% width makes them line up
+
+two-by-two */
+    box-sizing: border-box;
+    padding: 10px;
+    height: 120px; /* Give a fixed height to keep the
+
+grid clean */
+   
+    /* Style to match the dark background in the
+
+image */
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space below the boxes */
+}
+
+/* Inner styling for metric text */
+.metric-box h3 {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+.metric-box .big-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5865f2; /* Use your brand color for
+
+emphasis */
+    text-align: left;
+    margin: 5px 0 0 0;
+}
+
+/* Image styling */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.modal {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  display:flex; justify-content:center; align-items:center;
+}
+.modal-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  width: 300px;
+}
+.close {
+  cursor:pointer;
+  float:right;
+  font-size: 20px;
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <h1>Welcome back, Liyutsa Zirange</h1>
+    <p>Track your progress and achievements</p>
+    <div id="projectModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <form id="projectForm">
+    <input type="text" placeholder="Project Name" required />
+    <button type="submit" id="proj" style="margin-top: 10px">
+        +  Complete Project
+        </button>
+        </form>
+     </div>
+    </div>
+    </div>
+    <div class = "row">
+        <div class = "column profile-card">
+        <img src="{{ url_for('static', filename='assets/default-user.jpg') }}" alt="default-user">
+        <h2>{{ fullname }}</h2>
+        <h5>{{ email }}</h5>
+        <button type ="button" id="skl">{{ skill }}</button> <br>
+        <p>{{ bio }}</p>
+        <p>Joined December 5, 2025</p>
+        </div>
+
+        <div class = "column metrics-container">
+            <div class="metric-box">
+            <h3>Total Points</h3>   
+            </div>
+
+            <div class = "metrics-box">
+            <h3>Projects</h3>       
+            </div>
+
+            <div class = "metrics-box">
+            <h3>Hours Logged</h3>
+            </div>
+
+            <div class = "metrics-box">
+            <h3>Day Streak</h3>
+            </div>
+    </div>
+
+<div class="activity-section-wrapper">
+    <div class="activity-header">
+        <h3>Recent Activity</h3>
+        <span class="events-count">2 events</span>
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+            <div class="activity-icon">🏆</div> <div
+
+class="activity-details">
+                <p class="activity-title">Profile
+
+Complete</p>
+                <p class="activity-time">You've set up
+
+your profile!</p>
+                <p class="activity-time">14 minutes
+
+ago</p>
+            </div>
+            <div class="activity-points completed-task">
+                +25 pts
+            </div>
+        </div>
+       
+        <div class="activity-item">
+            <div class="activity-icon">💻</div> <div
+
+class="activity-details">
+                <p class="activity-title">Account
+
+Created</p>
+                <p class="activity-time">Welcome to the
+
+platform!</p>
+                <p class="activity-time">about 2 hours
+
+ago</p>
+            </div>
+            <div class="activity-points">
+                +10 pts
+            </div>
+        </div>
+
+        </div>
+</div>
+
+
+<div class="activity-section-wrapper">
+    <div class="activity-header">
+        <h3>Recent Activity</h3>
+        <span class="events-count">2 events</span>
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+            <div class="activity-icon">🏆</div> <div
+
+class="activity-details">
+                <p class="activity-title">Profile Complete</p>
+                <p class="activity-time">You've set up your profile!</p>
+                <p class="activity-time">14 minutes ago</p>
+            </div>
+            <div class="activity-points completed-task">
+                +25 pts
+            </div>
+        </div>
+       
+        <div class="activity-item">
+            <div class="activity-icon">💻</div> <div
+
+class="activity-details">
+                <p class="activity-title">Account Created</p>
+                <p class="activity-time">Welcome to the platform!</p>
+                <p class="activity-time">about 2 hours ago</p>
+            </div>
+            <div class="activity-points">
+                +10 pts
+            </div>
+        </div>
+
+        </div>
+</div>
+    
+</body>
+</html>

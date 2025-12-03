@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DashLite</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
     <div class="profile">
-      <form class="txt" action="/submit" method="POST">
+      <form class="txt" action="/dashboard" method="POST">
         <h1>Create your profile</h1>
         <p>Join our community and start tracking your progress</p>
         <label class="fn">Full Name</label>
@@ -33,11 +32,11 @@
         <br />
 
         <label class="skill">Skill Level</label>
-        <select id="skill" name="selectedFruit" class="inputbox">
-          <option value="Beginner" selected>Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Advanced">Advanced</option>
-        </select>
+       <select id="skill" name="skill" class="inputbox">
+  <option value="Beginner" {% if skill == "Beginner" %}selected{% endif %}>Beginner</option>
+  <option value="Intermediate" {% if skill == "Intermediate" %}selected{% endif %}>Intermediate</option>
+  <option value="Advanced" {% if skill == "Advanced" %}selected{% endif %}>Advanced</option>
+</select>
 
         <label class="bio">Bio</label>
         <textarea
@@ -52,5 +51,7 @@
         </button>
       </form>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
+
