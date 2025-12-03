@@ -21,17 +21,3 @@ form.addEventListener("submit", function (event) {
     alert("There is something wrong");
   }
 });
-
-const modal = document.getElementById("projectModal");
-const btn = document.getElementById("proj");
-const closeBtn = document.getElementById("closeModal");
-
-btn.onclick = () => modal.style.display = "flex";
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
-
-document.getElementById("projectForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Project submitted!");
-  modal.style.display = "none";
-});

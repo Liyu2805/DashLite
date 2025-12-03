@@ -12,7 +12,9 @@ def dashlite():
     email = request.form.get("email")
     bio = request.form.get("message")
     skill = request.form.get("skill")
-    return render_template("dashboard.html", fullname=fullname, email=email, bio=bio, skill=skill)
+    hours = 0.1
+    streak = 1
+    return render_template("dashboard.html", fullname=fullname, email=email, bio=bio, skill=skill, hours=hours, streak=streak)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
